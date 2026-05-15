@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WeQuote Tutorials Index</title>
+<style>
+  *,*::before,*::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #222;
+    background: #f7f8fa;
+  }
+  header {
+    background: #1d1d1d;
+    color: white;
+    padding: 1.5rem 1rem;
+  }
+  header h1 { margin: 0; font-size: 1.4rem; }
+  header .sub { opacity: 0.7; font-size: 0.9rem; margin-top: 0.25rem; }
+  main { max-width: 1100px; margin: 0 auto; padding: 1rem; }
+  .toc {
+    background: white;
+    border: 1px solid #e3e6ea;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .toc strong { display: block; margin-bottom: 0.5rem; }
+  .toc ul { list-style: none; padding: 0; margin: 0; display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.25rem 1rem; }
+  .toc a { color: #1d6fde; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  .toc .count { color: #888; font-size: 0.85em; }
+  section.cat { margin: 2rem 0; }
+  section.cat h2 { font-size: 1.4rem; margin: 0 0 1rem; padding-bottom: 0.5rem;
+                    border-bottom: 2px solid #1d1d1d; }
+  section.cat h3 { font-size: 1.05rem; color: #555; margin: 1.5rem 0 0.75rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+  .card {
+    background: white;
+    border: 1px solid #e3e6ea;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex; flex-direction: column;
+  }
+  .card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; }
+  .card h4 { margin: 0; font-size: 1rem; line-height: 1.3; }
+  .tags { flex-shrink: 0; }
+  .tag { display: inline-block; font-size: 0.7rem; padding: 0.15rem 0.4rem;
+          border-radius: 4px; margin-left: 0.25rem; font-weight: 600; text-transform: uppercase;
+          letter-spacing: 0.03em; }
+  .tag-pop { background: #fff1d6; color: #8a5a00; }
+  .tag-new { background: #dbf3e0; color: #1d6f3c; }
+  .meta { color: #888; font-size: 0.8rem; margin-top: 0.25rem; }
+  .summary { font-size: 0.9rem; color: #444; margin: 0.75rem 0 1rem; flex: 1; white-space: pre-line; }
+  .actions { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: auto; }
+  .btn { display: inline-block; padding: 0.5rem 0.9rem; border-radius: 6px;
+          text-decoration: none; font-size: 0.85rem; font-weight: 600; }
+  .btn-primary { background: #1d6fde; color: white; }
+  .btn-primary:hover { background: #155bbf; }
+  .btn-secondary { background: #eef1f5; color: #333; }
+  .btn-secondary:hover { background: #e0e4eb; }
+  .search-wrap { position: sticky; top: 0; background: #f7f8fa; padding: 0.75rem 0;
+                  margin-bottom: 1rem; z-index: 10; }
+  .search-wrap input { width: 100%; padding: 0.7rem 0.9rem; border-radius: 8px;
+                        border: 1px solid #c5cad1; font-size: 1rem; -webkit-appearance: none; }
+  .search-wrap input:focus { outline: none; border-color: #1d6fde; box-shadow: 0 0 0 3px rgba(29,111,222,0.15); }
+  .empty { padding: 2rem; text-align: center; color: #888; display: none; }
+  body.searching section.cat.no-match,
+  body.searching .grid > article.no-match,
+  body.searching h3.no-match { display: none; }
+  body.searching .empty.show { display: block; }
+  @media (max-width: 600px) {
+    .grid { grid-template-columns: 1fr; }
+    header h1 { font-size: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>WeQuote Tutorials Index</h1>
+  <div class="sub">73 tutorials &middot; generated 2026-05-15</div>
+</header>
+<main>
+<div class="search-wrap">
+  <input type="search" id="q" placeholder="Search tutorials by name, summary, author, or category..." autocomplete="off">
+</div>
+<div class="empty" id="empty">No tutorials match.</div>
+<nav class="toc"><strong>Categories</strong><ul><li><a href="#cat-accounting">Accounting <span class="count">(6)</span></a></li><li><a href="#cat-inventory">Inventory <span class="count">(13)</span></a></li><li><a href="#cat-onboarding">Onboarding <span class="count">(12)</span></a></li><li><a href="#cat-procurement">Procurement <span class="count">(4)</span></a></li><li><a href="#cat-quoting">Quoting <span class="count">(22)</span></a></li><li><a href="#cat-sales-orders">Sales Orders <span class="count">(2)</span></a></li><li><a href="#cat-service">Service <span class="count">(2)</span></a></li><li><a href="#cat-technicians">Technicians <span class="count">(1)</span></a></li><li><a href="#cat-workhub">WorkHub <span class="count">(11)</span></a></li></ul></nav>
+<section class="cat" id="cat-accounting"><h2>Accounting</h2><h3>Deposits and Retention</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>Settings for Deposits &amp; Over Spend</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Lee Roche &middot; 1 views</div>
+  <p class="summary">Created by Lee Roche
+A quick guide to setting up deposits and overspend thresholds for cleaner, safer project finances.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/10myS3VWZQiyO15mIMM7npMPOAI41xpU5/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/18?cat=37&amp;sub=65" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Invoicing Overview</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>Invoicing updates - Layout, Project Breakdown &amp; Summary</h4>
+    <div class="tags"><span class="tag tag-new">new</span></div>
+  </div>
+  <div class="meta">Robert Biro &middot; 6 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1j7d4BVaPtFcJSB3wETwv_8U8-pNt0tXv/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/75?cat=37&amp;sub=64" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Quickbooks</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>Deposits and QuickBooks Walkthrough</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Lee Roche &middot; 7 views</div>
+  <p class="summary">Created by Lee Roche
+Learn how deposit invoices sync with QuickBooks to keep your project finances accurate and automatic</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1CgkvmfCmhslJR8DbWC9PHA3jcNO0QZ_l/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/17?cat=37&amp;sub=68" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Sending Purchase Orders to Quickbooks </h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Robert Biro &middot; 0 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1mJ8fJBML1wgrFFZ1taO6glstRlfqqELw/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/40?cat=37&amp;sub=68" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Xero</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>Retention Invoices - Xero setup &amp; Walkthrough</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Lee Roche &middot; 2 views</div>
+  <p class="summary">Learn how to set up your Xero account to start taking retentions in your WeQuote account.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1xd51l8NANVKFlaTz6IOFQm4OBvpdqFES/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/23?cat=37&amp;sub=67" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Sending POs to Xero</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Robert Biro &middot; 2 views</div>
+  <p class="summary">Sending POs to Xero</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1Yxf4zGLRv5r6v8ADV1EKEQ_4w-XDMcsp/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/24?cat=37&amp;sub=67" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div></section><section class="cat" id="cat-inventory"><h2>Inventory</h2><h3>Goods In</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>Goods In: Receive Items Into Stock</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Lee Roche &middot; 2 views</div>
+  <p class="summary">Created by Lee Roche
+Learn how to receive items into stock accurately, update quantities, and validate deliveries with ease.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1G6TczwdBXE5iyxt2rQcs1ox4vmTYD74N/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/20?cat=40&amp;sub=82" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Goods Out</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>Goods Out: Dispatch Items to Jobs</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Lee Roche &middot; 4 views</div>
+  <p class="summary">Created by Lee Roche
+Learn how to dispatch items to jobs, assign serials, and keep project stock perfectly tracked</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1fd4QDcx11QE5zpevAiMPhz6I-LUPEM-h/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/21?cat=40&amp;sub=83" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Bring items back to the warehouse as free stock from a project</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 4 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1NOEcUQ6AhvFToovF0NZeZaGfZEDHhbhI/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/69?cat=40&amp;sub=83" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Inventory Setup</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>Click to download import sheet</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Lee Roche &middot; 3 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://docs.google.com/presentation/d/e/2PACX-1vQicuCQNhMT-7s2CIyN1grswq38kiLxUb-jZhR-PQJ9ib3eqTQdcyf6oe0PODI41MewwQVeI9k2LMlL/pubembed?start=false&amp;loop=false&amp;delayms=3000" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/35?cat=40&amp;sub=77" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>How to Import Stock into the warehouse </h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Lee Roche &middot; 6 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1HsFI-JdeiyTLMqV94vnJr8t-UvBiYI8B/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/36?cat=40&amp;sub=77" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Inventory Label Tag Definitions</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 4 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://docs.google.com/document/d/e/2PACX-1vQySbNKp_ShcScC6mAh5yau63qGDW35MPTI346h7yQ9Z6iyvIzngr-W0YsFuASDWtl4MD44Lx4tC6Vj/pub?embedded=true" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/37?cat=40&amp;sub=77" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Create &amp; Edit Inventory Labels</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 3 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1ZrmhcF27V71Gw8bboJBD_ifv4ZefFxE5/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/38?cat=40&amp;sub=77" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Recomended Labels &amp; Printers</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 8 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://docs.google.com/document/d/e/2PACX-1vTEpfeyOowlqyPXRygJLinT6UXIVhwhOS1txkb66XIH1kL_Ne61VIfQNT9Rc9HMTgKRyQAmMPya9WS5/pub?embedded=true" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/68?cat=40&amp;sub=77" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>How to setup the AppleTV App Integration</h4>
+    <div class="tags"><span class="tag tag-new">new</span></div>
+  </div>
+  <div class="meta">Charlie Thornton &middot; 5 views</div>
+  <p class="summary">A guide on how to setup the AppleTV App API Integration so you can begin scanning products in using WeQuote.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/139Kzg7XHGrSLNBvXnUhXhSzJa3-n172u/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/74?cat=40&amp;sub=77" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>How to populate the wequote inventory import sheet</h4>
+    <div class="tags"><span class="tag tag-new">new</span></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 3 views</div>
+  <p class="summary">Presented by Natalie Lowe
+How to populate the inventory import sheet in WeQuote.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/102z_s-kQL5SQTCQuPiR_aMRzjxTCFwsu/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/78?cat=40&amp;sub=77" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>How to Serialise a product</h4>
+    <div class="tags"><span class="tag tag-new">new</span></div>
+  </div>
+  <div class="meta">Charlie Thornton &middot; 2 views</div>
+  <p class="summary">Presented by: Charlie Thornton
+In this video I will show you the 4 main methods of serialising a product and how it works at various stages in your WeQuote Workflow.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/18ZKR7nxq_Oo8iCgxizayS3lHsNNjd3OE/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/82?cat=40&amp;sub=77" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Scanner Usage</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>How to use Scanners in your Inventory Workflow</h4>
+    <div class="tags"><span class="tag tag-new">new</span></div>
+  </div>
+  <div class="meta">Charlie Thornton &middot; 2 views</div>
+  <p class="summary">This is a comprehensive guide showing you how to use the scanners in your current inventory workflow. - Presented by Charlie Thornton</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1Bq411JQ8YpgYacK3WmP9t0shNLREGdx2/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/77?cat=40&amp;sub=85" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Scanners Setup</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>How to setup Scanners</h4>
+    <div class="tags"><span class="tag tag-new">new</span></div>
+  </div>
+  <div class="meta">Charlie Thornton &middot; 3 views</div>
+  <p class="summary">A guide on how to activate the scanners within your account and how to make a PIN for your warehouse staff.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1-D9GoXBP0MjGH03QN-bKkIy26A5F13-h/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/76?cat=40&amp;sub=84" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div></section><section class="cat" id="cat-onboarding"><h2>Onboarding</h2><h3>Customers &amp; Hierarchy</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>Setup a Hierarchy for Residential Clients</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 3 views</div>
+  <p class="summary">Created by Natalie Lowe
+Set up a clear hierarchy so every contact, project, quote, job, and invoice stays perfectly connected.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1eWc3ZIaZmBpb1narnKZ_mRybWtavSAQf/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/13?cat=39&amp;sub=49" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Setup a Hierarchy for Commercial Clients</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 2 views</div>
+  <p class="summary">Created by Natalie Lowe
+Set up commercial clients with multiple sites, projects, and contacts, keeping all work streams neatly organised.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1OJUsx4UivTTM5fIdjVxZt-Sxgst5mbU8/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/14?cat=39&amp;sub=49" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Merge Customers</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Nithish Pajeer &middot; 0 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1hRVvchMD6GsT6879is6jPUmHyqWc_gT8/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/46?cat=39&amp;sub=49" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Labour Setup</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>How to Create Labor (Part 1)</h4>
+    <div class="tags"><span class="tag tag-new">new</span></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 1 views</div>
+  <p class="summary">Presented by Natalie Lowe:
+A full 5 part series on how to create labour and get you used to the labour system within WeQuote.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1omj34mvBnOmSgP2ZikAIZVC0IibIrs1r/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/83?cat=39&amp;sub=100" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Every Way to Add Labor (Part 2)</h4>
+    <div class="tags"><span class="tag tag-new">new</span></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 0 views</div>
+  <p class="summary">Presented by Natalie Lowe:
+A full 5 part series on how to create labour and get you used to the labour system within WeQuote.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1yYiESMVQzjg3cu8Qa2HbijqNDzquVEJO/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/84?cat=39&amp;sub=100" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>How to Add Labor Per Product (Part 3)</h4>
+    <div class="tags"><span class="tag tag-new">new</span></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 0 views</div>
+  <p class="summary">Presented by Natalie Lowe:
+A full 5 part series on how to create labour and get you used to the labour system within WeQuote.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1yYiESMVQzjg3cu8Qa2HbijqNDzquVEJO/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/85?cat=39&amp;sub=100" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>How to Add Labor Per System (Part 4)</h4>
+    <div class="tags"><span class="tag tag-new">new</span></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 1 views</div>
+  <p class="summary">Presented by Natalie Lowe:
+A full 5 part series on how to create labour and get you used to the labour system within WeQuote.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1Ft6xIUXmcaqX3K_fLXgYoM-sFE2gA_qR/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/86?cat=39&amp;sub=100" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>How to Add Labor as a Separate System (Part 5)</h4>
+    <div class="tags"><span class="tag tag-new">new</span></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 0 views</div>
+  <p class="summary">Presented by Natalie Lowe:
+A full 5 part series on how to create labour and get you used to the labour system within WeQuote.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1_TsCLECLwm9zBt8k5ZXT_gGLM1vQOlIi/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/87?cat=39&amp;sub=100" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Operational Setup</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>How to access the onboarding guide</h4>
+    <div class="tags"><span class="tag tag-pop">popular</span><span class="tag tag-new">new</span></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 33 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1_8QrZSVYwmUvYGu7lAAtu_aICK3_tQUU/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/72?cat=39&amp;sub=46" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>WeQuote: An Overview</h4>
+    <div class="tags"><span class="tag tag-pop">popular</span><span class="tag tag-new">new</span></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 26 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1Ma3nZjlLpA4AVRnhDxCo1Jd5RFiX7YKy/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/73?cat=39&amp;sub=46" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Welcome to WeQuote! Where to Start</h4>
+    <div class="tags"><span class="tag tag-pop">popular</span><span class="tag tag-new">new</span></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 62 views</div>
+  <p class="summary">Presented by Natalie Lowe:
+Covers all the starting foundations to get up and running with WeQuote. Where to start, what to configure, how to set up labour types and catalogues etc.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1SgcOykNA0vn0YbCceUuqiF4LS6GEnHgW/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/81?cat=39&amp;sub=46" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Quoting Setup</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>Setup Labour Types</h4>
+    <div class="tags"><span class="tag tag-new">new</span></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 7 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1mcKfylPXmhjB6Y5gop92NI1M-sb8zlb2/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/71?cat=39&amp;sub=47" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div></section><section class="cat" id="cat-procurement"><h2>Procurement</h2><h3>Procurement Overview</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>Procurement &amp; Inventory start to finish demo </h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Lee Roche &middot; 4 views</div>
+  <p class="summary">Procurement &amp; Inventory start to finish demo .</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/118pGxOAVG0TMvwtTcEumNlKSqXyRWIf7/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/30?cat=38&amp;sub=70" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Product Log</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>Product Log: Deep Dive</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Lee Roche &middot; 5 views</div>
+  <p class="summary">Created by Lee Roche
+A deep dive into the Product Log so you can trace products, serials, and project links effortlessly.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1TQV6lyZ3r56t4dUvdrwQGm-dfL3SHn4E/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/15?cat=38&amp;sub=72" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Creating POs with Auto-Approval </h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Lee Roche &middot; 5 views</div>
+  <p class="summary">Created by Lee Roche
+Create POs with automated approval rules to keep purchasing quick, consistent, and friction-free.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1McJjLKe-FzKxRhnwaY_U0KfPs2Js6ASs/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/16?cat=38&amp;sub=72" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>How to re-order items on the quote and proposal</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Andrew Musgrave &middot; 2 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1XZEdpgwLzi116adn7py40NaLVsHlqCQR/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/66?cat=38&amp;sub=72" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div></section><section class="cat" id="cat-quoting"><h2>Quoting</h2><h3>Catalogue Pricing</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>Edit and Manage Catalogue Pricing</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Andrew Musgrave &middot; 5 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1F27QKiyoj-4JghNrW3c2UT1pFHl0NgrR/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/67?cat=36&amp;sub=51" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Groups and Areas</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>Commercial Quotes: Groups &amp; Areas</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 5 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1vr7bgv2LVbefj2bsbTXZmRAc2ffatil4/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/39?cat=36&amp;sub=54" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Options</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>Build Options for Keypads in Systems &amp; Areas</h4>
+    <div class="tags"><span class="tag tag-pop">popular</span></div>
+  </div>
+  <div class="meta">Lee Roche &middot; 12 views</div>
+  <p class="summary">Build Options for Keypads in Systems &amp; Areas for Lutron</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1RxLsyYP5ZPVf_wDyDKCEXFavtnmchdwV/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/27?cat=36&amp;sub=55" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Copying Options to other Quotes &amp; Using the Option Library</h4>
+    <div class="tags"><span class="tag tag-pop">popular</span></div>
+  </div>
+  <div class="meta">Lee Roche &middot; 12 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1eAkw7C1q8bBvisNBb_NxyU6VDJp7-cmd/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/49?cat=36&amp;sub=55" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Basic Interactive Options</h4>
+    <div class="tags"><span class="tag tag-pop">popular</span></div>
+  </div>
+  <div class="meta">Andrew Musgrave &middot; 11 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1mteZaX1kGV-PdPp7QVY-AYQo4U3VlFNb/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/50?cat=36&amp;sub=55" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Create an option for service level agreements</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 5 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1KpmTyGh_KVL4TbEMgLsp4GwsULlSyhYN/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/53?cat=36&amp;sub=55" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>How to use Option Groups</h4>
+    <div class="tags"><span class="tag tag-new">new</span></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 9 views</div>
+  <p class="summary">Presented By Natalie Lowe:
+How to use Option Groups within the WeQuote Quote Editor</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1Br2UstW4ciwMoXPElXlsU8KkQX4JLk4e/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/80?cat=36&amp;sub=55" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Proposal and Proposal Editor</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>How to show Discounts on Proposals</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Lee Roche &middot; 4 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1b9DrOttCExa3Andb4-Ynp-31FU1FlTBF/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/26?cat=36&amp;sub=58" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Payment Stages &amp; Formulas</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Lee Roche &middot; 2 views</div>
+  <p class="summary">Payment Stages &amp; Formulas</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1PCs2ik_bljLdcgvIGfuyqQbHj65bAUf3/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/29?cat=36&amp;sub=58" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>How to use the proposal editor</h4>
+    <div class="tags"><span class="tag tag-pop">popular</span></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 12 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1j7UXYzQZNinm1PoOmbQOmpAsqOEVvltP/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/54?cat=36&amp;sub=58" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Edit Quote Item List Layout in Proposal</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 3 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1oNzrCAnI03H3MXnMiKG0GRA5mNjuzFQX/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/55?cat=36&amp;sub=58" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Using Loops to display products in the proposal editor</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 3 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1EvIq6wyswgG5zvAxgo2pByBvMZ9DIurO/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/56?cat=36&amp;sub=58" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>How to use Collapsible Containers &amp; Dropdowns in the Proposal Editor</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 1 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1GJ_1KqtQZ75JgW-z8QV9a7zSW2PT9tKH/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/57?cat=36&amp;sub=58" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Show &quot;Back to Top&quot; button on proposals</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 0 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1qNMbwf91wa7X9D2zL5A7HHhEqT2mt_wF/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/58?cat=36&amp;sub=58" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Use a navigation in the proposal editor</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 0 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1xj0cDH9a6xQ5rJDw4FH08Sh-klHMoslu/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/62?cat=36&amp;sub=58" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>How to use header sections in the proposal editor</h4>
+    <div class="tags"><span class="tag tag-new">new</span></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 2 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1wVMB8ylfrxsZhCyZXUDXKLPcWq-n3Jsw/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/70?cat=36&amp;sub=58" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Quoting overview</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>How to Use Product Counters</h4>
+    <div class="tags"><span class="tag tag-pop">popular</span></div>
+  </div>
+  <div class="meta">Lee Roche &middot; 11 views</div>
+  <p class="summary">How to Use Product Counters</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1CgI78cWCKxYuYAo0djv5Pq2HJ1f7VX8z/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/28?cat=36&amp;sub=50" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Subscriptions</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 5 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1KpmTyGh_KVL4TbEMgLsp4GwsULlSyhYN/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/48?cat=36&amp;sub=50" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Systems and Subsystems</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>Intro to Systems and How to use Systems</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Lee Roche &middot; 7 views</div>
+  <p class="summary">Created by Lee Roche
+Understand how Systems group related items, making quoting, planning, and onsite work far more structured.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1ME6EOi6Nl0IHtBqQqdHk-v7xLTO3LYTa/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/19?cat=36&amp;sub=53" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Toolkits, Bundles and Packages</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>Creating Cable Packages  Part 1 - Old School</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Lee Roche &middot; 4 views</div>
+  <p class="summary">Created by Lee Roche
+Understand how to create and quote your cabling packages</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1UVJVYvJdmJ3_zp4OV_yjEm_Hj3Qi-xws/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/22?cat=36&amp;sub=99" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>What is a toolkit and how to edit them</h4>
+    <div class="tags"><span class="tag tag-pop">popular</span></div>
+  </div>
+  <div class="meta">Andrew Musgrave &middot; 9 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1IuC9saryxMe2Og8lU3Ynk8trbYsDY0bP/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/64?cat=36&amp;sub=99" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Using accessories to create bundles and packages</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Andrew Musgrave &middot; 7 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1IuC9saryxMe2Og8lU3Ynk8trbYsDY0bP/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/65?cat=36&amp;sub=99" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div></section><section class="cat" id="cat-sales-orders"><h2>Sales Orders</h2><h3>Sales Orders Overview</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>How to Use Sales Orders</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 7 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1Hu5CCnW8UnGy2ll7UtXSY9D8kSGZGioU/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/43?cat=44&amp;sub=61" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Sales orders: Use Cases</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>Expenses Approvals, adding to Quotes &amp; Sales Orders</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 4 views</div>
+  <p class="summary">How to manage expenses through the SNAGG app and Workhub: Approve, add to aa sales order or quote</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1DlDjS4x6MxDJ7NW5qiA-hCfa-Ml2OZF4/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/47?cat=44&amp;sub=62" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div></section><section class="cat" id="cat-service"><h2>Service</h2><h3>Service Jobs and Tasks</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>Sales Orders &amp; Invoicing Service Work</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 8 views</div>
+  <p class="summary">An overview of how to use the sales orders to invoice for any billable tasks or service work that has been scheduled in the WorkHub and completed on the SNAGG app.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1vT1ubdek1m8NqxzilkB9OoS9fDDorxCp/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/31?cat=43&amp;sub=98" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>How to set up jobs and tasks for remote service work and call outs</h4>
+    <div class="tags"><span class="tag tag-pop">popular</span><span class="tag tag-new">new</span></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 12 views</div>
+  <p class="summary">Presented by Natalie Lowe:
+How to set up jobs (work orders) and tasks for remote service work and call outs.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1KHzzhJXIfR5fFlhKE4xULLo4pm9WNYyn/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/79?cat=43&amp;sub=98" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div></section><section class="cat" id="cat-technicians"><h2>Technicians</h2><h3>Snagg Overview</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>How to use the Snagg App</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 5 views</div>
+  <p class="summary">An introduction to the Snagg App</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1w7BZ-LKLM_CCsPUNRA-SnIVAknGPqj97/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/45?cat=42&amp;sub=96" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div></section><section class="cat" id="cat-workhub"><h2>WorkHub</h2><h3>Overview</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>Task Creation and Job Scheduling from Quotes</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 7 views</div>
+  <p class="summary">Created by Natalie Lowe
+Seamlessly schedule jobs straight from quotes, turning project plans into clear, actionable work for your team.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1cceEz0xg7_joXvN3QNsyg3cNyEhSsWiS/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/6?cat=45&amp;sub=101" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>WorkHub Workflow Process</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 5 views</div>
+  <p class="summary">Created by Natalie Lowe
+Master the WorkHub process to manage tasks, track progress, and coordinate engineers with complete clarity.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1BawjH-My5MaVu3eLROKBUY29iHe0VfbO/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/7?cat=45&amp;sub=101" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Project Section for WorkHub </h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 5 views</div>
+  <p class="summary">Created by Natalie Lowe
+Learn how the Project view keeps every work item, status, and update tied neatly to each job</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1Jlk1sxpkz0jGqcUfP4ha9kcOYn-q1Rb5/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/9?cat=45&amp;sub=101" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Tasks &amp; Jobs</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>Task Types and Task Builder Navigation</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 8 views</div>
+  <p class="summary">Created by Natalie Lowe
+Understand task types and quickly build tasks using the Task Builder’s simple, guided navigation.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/12UVjJviMGWWqktVa5JoOS9WXIfNLR_VQ/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/10?cat=45&amp;sub=89" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Multiple Tasks from One Product</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 0 views</div>
+  <p class="summary">Created by Natalie Lowe
+Learn to turn a single product into several structured tasks, keeping project workflows clear and efficient</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1T33T-PMzfJldA7ZYt5uJSeHU3z6hBrF1/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/11?cat=45&amp;sub=89" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Jobs and their uses: Phases, Systems &amp; More</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 1 views</div>
+  <p class="summary">Created by Natalie Lowe
+Learn how Jobs help you split work by phases or systems for clearer planning and execution</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1ERAGGsBtNhYD-HkJX9n1zqB3rk_lqrSb/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/12?cat=45&amp;sub=89" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Add an additional Subtask to a Task</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 2 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1QhIEp6aWOnM4DuSK0DY9oP995IEKT7tR/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/60?cat=45&amp;sub=89" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Teams and User Management</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>View &amp; Edit Engineer Information</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 2 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1ngU-1KYueGnhfgAM2CrbrmGL8s5k3z9m/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/59?cat=45&amp;sub=95" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Set Field User,Technician,Engineer Hours &amp; Availability</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 2 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1Dr6aWJWz4_nZJTYVP7lyOpz8xf11skj6/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/61?cat=45&amp;sub=95" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div><h3>Workhub Setup</h3><div class="grid"><article class="card">
+  <div class="card-head">
+    <h4>WorkHub Navigation Overview</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 3 views</div>
+  <p class="summary">Created by Natalie Lowe
+Get familiar with WorkHub’s layout and jump between tasks, jobs, and engineer views with ease.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1cJTU9pVVoE1dsErW5vBD0a0Ryx6DXJPy/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/8?cat=45&amp;sub=88" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article><article class="card">
+  <div class="card-head">
+    <h4>Getting Started with Work Hub</h4>
+    <div class="tags"></div>
+  </div>
+  <div class="meta">Natalie Lowe &middot; 6 views</div>
+  
+  <div class="actions">
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/1YkZK1xHGDkjc1EwjKyr5fdzDYbfKxGXg/view" target="_blank" rel="noopener">Watch video</a>
+    <a class="btn btn-secondary" href="https://app.wequote.cloud/la-techs/tutorials/44?cat=45&amp;sub=88" target="_blank" rel="noopener">Open in WeQuote</a>
+  </div>
+</article></div></section>
+</main>
+<script>
+(function() {
+  const q = document.getElementById('q');
+  const empty = document.getElementById('empty');
+  const cards = Array.from(document.querySelectorAll('article.card'));
+  const sections = Array.from(document.querySelectorAll('section.cat'));
+  const subs = Array.from(document.querySelectorAll('section.cat h3'));
+
+  // Pre-build a haystack per card
+  cards.forEach(c => {
+    const section = c.closest('section.cat');
+    const cat = section ? section.querySelector('h2').textContent : '';
+    // Find the closest preceding h3 inside the same section
+    let sub = '';
+    let el = c.parentElement && c.parentElement.previousElementSibling;
+    if (el && el.tagName === 'H3') sub = el.textContent;
+    c.dataset.haystack = (
+      c.querySelector('h4').textContent + ' ' +
+      (c.querySelector('.summary')?.textContent || '') + ' ' +
+      (c.querySelector('.meta')?.textContent || '') + ' ' +
+      cat + ' ' + sub
+    ).toLowerCase();
+  });
+
+  function apply() {
+    const term = q.value.trim().toLowerCase();
+    if (!term) {
+      document.body.classList.remove('searching');
+      cards.forEach(c => c.classList.remove('no-match'));
+      sections.forEach(s => s.classList.remove('no-match'));
+      subs.forEach(s => s.classList.remove('no-match'));
+      empty.classList.remove('show');
+      return;
+    }
+    document.body.classList.add('searching');
+    let visible = 0;
+    cards.forEach(c => {
+      const m = c.dataset.haystack.includes(term);
+      c.classList.toggle('no-match', !m);
+      if (m) visible++;
+    });
+    // Hide subcategory headings with no visible cards beneath them
+    subs.forEach(h => {
+      let next = h.nextElementSibling;
+      let anyVisible = false;
+      if (next && next.classList.contains('grid')) {
+        anyVisible = Array.from(next.children).some(a => !a.classList.contains('no-match'));
+      }
+      h.classList.toggle('no-match', !anyVisible);
+    });
+    // Hide sections with no visible cards
+    sections.forEach(s => {
+      const any = Array.from(s.querySelectorAll('article.card')).some(a => !a.classList.contains('no-match'));
+      s.classList.toggle('no-match', !any);
+    });
+    empty.classList.toggle('show', visible === 0);
+  }
+  q.addEventListener('input', apply);
+})();
+</script>
+</body>
+</html>
